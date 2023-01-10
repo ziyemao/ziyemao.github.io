@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+	       * {
+	         margin:0px;
+	         padding:0px;
+	       }
+	       #ding {
+	           width:1200px;
+	           height:90px;      
+	           margin:10px auto;
+	       }
+	     #imga {
+	               height:90px;
+	               margin-right:40px;
+	           }
+	       #ss {
+	           display:inline-block;
+	           height:25px;
+	           width:200px;
+	       }
+	       #ding ul {
+	           width:524px;
+	           height:90px;
+	           display:inline-block;
+	       }
+	       #ding ul li {
+	           display:inline-block;
+	           list-style:none;
+	           width:70px;
+	           height:90px;
+	           line-height:90px;
+	           text-align:center;
+	           cursor:pointer;/* 变小手*/
+	       }
+	       #ding  a{
+	         cursor:pointer;
+	       }
+	       #sc {
+	       position:absolute;
+	       top:40px;
+	       left:1030px;
+		   width: 25px;
+		   cursor: pointer;
+	       }
+	       #denglu {
+	           position: absolute;
+	           width: 250px;
+	           height: 250px;
+	          background-image:url(img/dlbg.jpg);
+	          border:1px solid #899ef2;
+	           left: 900px;
+	           top: 110px;
+	           display: none;
+	           z-index:3;
+	       }
+	        
+	           #denglu ul 
+	           {
+	           margin-top:50px;
+	           list-style:none;
+	           }
+	               #denglu ul li {
+	                   margin:20px 0px 0px 10px;
+	               }
+			
+	       #dl {
+	           margin: 10px 10px 0px 60px;
+	           width: 100px;
+	           height:30px;
+	       }
+	       #denglu a {
+	           text-decoration:none;
+	           display:inline-block;
+	          font-size:10px;
+	          font-weight:700;
+	          font-family:宋体;
+	       }
+	       #zhuce {
+			  
+	           display: none;
+	           width: 400px;
+	           height: 300px;
+	           position: absolute;
+	           top: 150px;
+	           left: 370px;
+	           border:1px solid #a5aaf3;
+	          background-image:url(img/zcbg.jpg);
+	           z-index:2;
+	       }
+	           #zhuce ul {
+	               margin-top: 30px;
+	               list-style: none;
+	           }
+	           #zhuce ul li {
+	                 margin: 20px 0px 0px 0px;
+	           }
+	           #zhuce ul li span {
+	                   display: inline-block;
+	           }
+	           #zhuce ul li div{
+	               display:inline-block;
+	           }
+	       #zc {
+	           display: inline-block;
+	           width: 100px;
+	           height: 30px;
+	           margin: 30px 0px 0px 100px;
+	           background-color: #899ef2;
+	           color: white;
+	           border: 1px solid black;
+	           font-family: 黑体;
+	           cursor: pointer;
+	       }
+	        #zc:active {
+	               background-color:#4d6def;
+	           }
+	       #imgn {
+	           width:1080px;
+	           height:360px;
+	           margin:20px auto;
+	           overflow:hidden;
+	           border-radius: 10px 10px;
+			   position:relative;
+	       }
+	       #imgt {
+	           width:1080px;
+	           height:360px;
+	           position:relative;
+	          display:flex;
+	           left:0px;
+	       }
+		  
+		   #si{
+			   position: absolute;
+			   top: 3px;
+			   right: 446px;
+		   }
+		   #nf{
+			   position: absolute;
+			   top: 20px;
+			   right:450px;
+			}
+		.shang{
+		    position:relative;
+			width: 240px;
+			height: 340px;
+			display: inline-block;
+		   margin: 14px 0px 10px 20px;
+		   border-radius: 4%;
+		box-shadow: 0 0 10px rgb(0 0 0 / 13%)
+		}
+		#tupian{
+			width: 1060px;
+			margin: 0 auto;
+		}
+		#tupian img{
+			width: 180px;
+			height: 210px;
+			position: relative;
+			top: 20px;
+			left:30px;
+		}
+		.PP{
+	   margin: 20px 0px 0px 20px;
+	   font-size: 15px;
+	   font-weight:600;
+	   height: 20px;
+	   display:block;
+		}
+	
+		.pp2{
+        margin: 35px 0px 0px 20px;
+		font-size: 20px;
+		font-weight: 500;
+		color: red;
+		display: inline-block;
+		}
+		.bt{
+			
+			float: right;
+			width: 74px;
+			height: 30px;
+			margin: 35px 15px 0px 0px;
+			color: #f3f3f3;
+			background-color: #ff3a17;
+		    border: 1px solid #ff3a17;
+			border-radius:10% ;
+		 cursor:pointer;
+		}
+		.bt:active{
+			background-color:#e65757 ;
+			
+		}
+		#imgt img{
+			   width: 1080px;
+			   height:360px;
+		   }
+		   .prev{
+		       background:#666;
+		       width:30px;
+		       height:40px;
+		       color:#fff;
+		       text-align:center;
+		       line-height:40px;
+		       position:absolute;
+		       left:5px;
+		       top:45%;
+		       cursor:pointer;
+		   }
+		   .next{
+		       background:#666;
+		       width:30px;
+		       height:40px;
+		       color:#fff;
+		       text-align:center;
+		       line-height:40px;
+		       position:absolute;
+		       right:5px;
+		       top:45%;
+		       cursor:pointer
+		   }
+		   #icolist{
+		       position: absolute;
+		       right: 10px;
+		       bottom: 10px;
+		   }
+		   #icolist li{
+		       width: 30px;
+		       height: 30px;
+		       border-radius: 50%;
+		       background: #666;
+		       text-align: center;
+		       line-height:30px;
+		       color:#fff;
+		       float:left;
+		       margin-left: 5px;
+		       cursor: pointer;
+		       list-style:none;
+		   }
+		   #wuhu{
+		       position: absolute;
+		       left:10px;
+		       bottom: 10px;
+		       width: 400px;
+		       height: 50px;
+		       background-color: rgba(80,80,80,0.2);
+		       font-size:20px;
+		       color:white;
+		       font-weight:bold;
+		   }
+		   #btnss{
+		       top:40px;
+		       height:28px;
+		       position: absolute;
+		       width: 65px;
+		       cursor: pointer;
+		   }
+		   #logOut{
+		       position: absolute;
+	           width: 150px;
+	           height: 150px;
+	           background-image:url(img/lobg.jpg);
+	           border:1px solid #899ef2;
+	           left: 900px;
+	           top: 110px;
+	           display: none;
+	           z-index:3;
+		   }
+		   #out{
+		       margin:center;
+		   }
+		   #message{
+		       text-align:center;
+		   }
+		   .type{
+		       position: absolute;
+		       left:20px;
+		       top:270px;
+		   }
+		   .type1{
+		       position: absolute;
+		       left:70px;
+		       top:270px;
+		   }
+		   .font{
+		       font-size:6px;
+		       color:red;
+		   }
+	   </style>
+	<body style="background-color: #ebebeb;">
+		    <div id="ding">
+		        <img src="img/logo.png" align="top" id="imga" />
+		        <ul>
+		            <li onclick="xr(0,'')" id="dm0">全部</li>
+		            <li onclick="xr(1,'奇幻')" id="dm1">奇幻</li> <!-- 如果要给一个字符串的参数要用""括起来也可以用‘’这个括起来 -->
+		            <li onclick="xr(2,'搞笑')" id="dm2">搞笑</li>
+		            <li onclick="xr(3,'治愈')" id="dm3">治愈</li>
+		            <li onclick="xr(4,'恋爱')" id="dm4">恋爱</li>
+		            <li onclick="xr(5,'美食')" id="dm5">美食</li>
+		        </ul>
+		        <input type="text" id="ss" value="输入关键字进行查找"/>
+		        <img src="img/ss.png" id="btnss" title="搜索"/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        <a id="dlu">登录</a>
+		        <img src="img/sc.png" id="sc" alt="" title="收藏"/>
+		        <hr style="width:960px; background-color:black;margin: 0 auto;" />
+				<p id="si"></p>
+				<p id="nf"></p>
+		    </div>
+		    <div id="denglu">
+		        <span>欢迎登录爱看动漫</span>
+		        <a onclick="closed1()" style="float:right;" href="#">关闭</a>
+		        <ul>
+		            <li> <span>账&nbsp;号:&nbsp;&nbsp;</span><input type="text"  id="zhanghao"/></li>
+		            <li> <span>密&nbsp;码:&nbsp;&nbsp;</span><input type="password" id="mima"/></li>
+		        </ul>
+		        <input type="button" value="立即登录" id="dl" >
+		        <a  href="#" id="regist">点击注册</a>
+		    </div>
+		    <div id="logOut">
+		        <span id="message"></span><br/><br/><br/>
+		        <center>
+		        <input type="button" value="退出登录" id="out"/>
+		        <input type="button" value="关闭" id="gbi"/>
+		        </center>
+		    </div>
+		    <div id="zhuce">
+		        <span>注册</span>
+		        <a style="float:right;" onclick="closed()" href="#">关闭</a>
+		        <ul>
+		            <li><span>昵&nbsp;&nbsp;&nbsp;&nbsp;称:</span><input type="text" id="ni" onblur="checkNiChen()"/><div id="name" class="font">由2~3个汉字组成</div></li>
+		            <li><span>账&nbsp;&nbsp;&nbsp;&nbsp;号:</span><input type="text" id="zhang" onblur="checkUser()"/><div id="user" class="font">英文字母和数字组成的4-16位字符,以字母开头</div></li>
+		            <li><span>密&nbsp;&nbsp;&nbsp;&nbsp;码:</span><input type="password" id="mi" onblur="checkPwd()"/><div id="Pwd" class="font">密码由4-10位英文字母和数字字符组成</div></li>
+		            <li><span>确认密码:</span><input type="password" id="mi2" onblur="checkRepwd()"/><div id="rePwd"  class="font"></div></li>
+		        </ul>
+		        <input type="button" value="注册" id="zc" />
+		    </div>
+		    <div id="imgn">
+		        <div id="imgt">
+		            <img src="img/gmzr.jpg"/>
+		            <img src="img/jdgjj.jpg" />
+		            <img src="img/zllyhhy.jpg" />
+		            <img src="img/bingguo.jpg" />
+		            <img src="img/gmzr.jpg"/>
+		        </div>
+		        <div id="wuhu"></div>
+		        <ul id="icolist">
+		            <li>1</li>
+		            <li>2</li>
+		            <li>3</li>
+		            <li>4</li>
+		        </ul>
+		        <div class="prev">《</div>
+		        <div class="next">》</div>
+		    </div>
+			<h2 style="margin-left: 150px;" id="biao"></h2>
+		   <script src="Main.js"></script>
+	</body>
+</html>
